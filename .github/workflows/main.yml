@@ -10,11 +10,6 @@ jobs:
       - name: Checkout
         uses: "actions/checkout@v2"
 
-      - name: Setup Python
-        uses: "actions/setup-python@v1"
-        with:
-          python-version: "3"
-
       - name: Install pandoc
         run: |
           sudo apt-get install pandoc
@@ -25,8 +20,16 @@ jobs:
           rm .gitignore *.md #otherwise .gitignore excludes html output
           touch .nojekyll# #Needed to stop github rendering the talks
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      -
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          branch: gh-pages
-          folder: .
+          target_branch: gh-pages
+          build_dir: .
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+#      - name: Deploy to GitHub Pages
+#        uses: JamesIves/github-pages-deploy-action@4.1.4
+#        with:
+#          branch: gh-pages
+#          folder: .
