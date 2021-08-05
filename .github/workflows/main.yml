@@ -30,4 +30,4 @@ jobs:
           jekyll: false
           verbose: true
         env:
-          GITHUB_PAT: ${{ secrets.TEST }}
+          GITHUB_TOKEN: ${{ secrets.TEST }}
