@@ -20,7 +20,10 @@ jobs:
           sudo apt-get install pandoc
 
       - name: Build
-        run: make
+        run: |
+          make
+          rm .gitignore *.md #otherwise .gitignore excludes html output
+          touch .nojekyll# #Needed to stop github rendering the talks
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
