@@ -23,11 +23,7 @@ jobs:
         run: make
 
       - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
+        uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
-          target_branch: gh-pages
-          build_dir: .
-          jekyll: false
-          verbose: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.TEST }}
+          branch: gh-pages
+          folder: .
