@@ -19,17 +19,17 @@ jobs:
           make
           rm .gitignore *.md #otherwise .gitignore excludes html output
           touch .nojekyll# #Needed to stop github rendering the talks
-
-      -
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: .
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-#      - name: Deploy to GitHub Pages
-#        uses: JamesIves/github-pages-deploy-action@4.1.4
+          mv slides.html index.html
+#      -
+#        uses: crazy-max/ghaction-github-pages@v2
 #        with:
-#          branch: gh-pages
-#          folder: .
+#          target_branch: gh-pages
+#          build_dir: .
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.4
+        with:
+          branch: gh-pages
+          folder: .
