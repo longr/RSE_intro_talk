@@ -2,85 +2,134 @@
 % Robin Long
 % 13/13/13
 
-% Help is on the way - Bicycle repair man
-% Faulty code - Spanish inquisition (bugs) Dead parrot (does not work)
-% Release your code - How not to be seen.
-% Dont need every tool if you forget the purpose - machine that goes ping
+
+# Software sustainability:
+
+why it's vital to research
 
 
-RSEs collaborate with researchers to develop the software they need - Simon Hettrick
-
-# Software sustainability: why is's vital to research
+## Why is software important?
 
 * Research is a process
-  * Software is an important step in that process
-* Research software is: any software that is used to generate, process
-  or analyse results that you intend to appear in a publication.
+* Software is an important step in that process
 
+<!-- 
+if you cannot do research without a computer, you cannot do it without software
+like lab equipment it needs to be "callibrated" and "checked"
+-->
+
+## What is Research software?
+
+* Research software is any software that is used to generate, process
+  or analyse results that you intend to use in a publication.
 * It can be anything from a few lines of code written by yourself, to
   a professionally developed software package.
 
+
 # How important is software?
 
-* Plots from SSI:
-  * Use, Critical, Develope
-  * Per discipline use
-  * Papers citing software
-  
+
+## How many use software?
+
+![created by Simon Hettrick, SSI](images/use_software-SH.png)
+
+
+## Split by disciplin
+
+![created by Simon Hettrick, SSI](images/by_faculty-SH.png)
+
+
+## Papers Citing Software
+
+![created by Simon Hettrick, SSI](images/papers-SH.png)
+
+
 # What is software engineering?
+
+
+##
 
 * Making better software for people
 
-# What is Research Software Engineering?
 
+# What are Research Software Engineers?
+
+
+##
+
+* A Research Software Engineer (RSE) combines professional software
+  engineering expertise with an intimate understanding of research.
+
+* "RSEs collaborate with researchers to develop the software they need" - Simon Hettrick
+
+
+## 
+
+![created by Simon Hettrick, SSI](images/RSE_scale_simon_hettrick.png)
+
+
+<!--
 * SH slide: https://slides.com/simonhettrick/more-to-research-than-researchers#/3/4/3
+-->
 
-
+<!--
 % PhD Comics - reuse software http://phdcomics.com/comics/archive_print.php?comicid=1689
+-->
 
 # What makes software sustainable
 
+##
+
+![](images/download_postdoc.png)
+
+## 
+
+* Reproducible (add definition)
+* Replicable (add definition)
+
+<!--
 * Reproducible + replicable
   * Does it work on Can it be ran on a different machine? (Portable)
   * Do I need your postdoc to run it? (Documentation) %Tweet - download postdoc
   * Can I access it? (Store in repository and license)
   * Is software correct?
 	* Did it get tested? Does it have tests?
-			
+-->		
 
-# SH - https://slides.com/simonhettrick/software-skills-are-vital-to-research#/6
+# Software skill are vital
 
-* Software is fundamental to all disciplines of research
-  * Software skills will allow you to work faster, more reliably and with less boredom
-  * We provide access to training and support to help you in your research
+<!--# SH - https://slides.com/simonhettrick/software-skills-are-vital-to-research#/6-->
+
+
+
+##
+
+* Software is fundamental to all disciplines of research[^1]
+* Software skills will allow you to work faster, more reliably and with less boredom
+* We provide access to training and support to help you in your research
+
+[^1]: https://slides.com/simonhettrick/software-skills-are-vital-to-research#/6
+
 
 # How can RSE skills help?
 
-## Efficiency
+##
 
-* Speed up write-run-test cycle
-* Testing (TTD?)
-* CI
-* VC
-* Skills
-* Automation
-
-## Correctness
-
-* Testing
-* CI
-
-## Impact
-
-* Release
-* Share
-* Package
+* Efficiency
+<!--* Speed up write-run-test cycle
+  * Testing and Continuous Integration
+  * Version Control
+  * Automation -->
+* Correctness
+<!--  * Testing
+  * Continuous -->
+* Impact
+<!-- * Release
+  * Share
+  * Package
 * Documentation
-
-# What services do we provide?
-
-## What is DSI and N8 CIR?
-
+-->
+<!--
 ## What can you do?
 
 * Change software to ensure reproducibility (and save time)
@@ -96,7 +145,10 @@ RSEs collaborate with researchers to develop the software they need - Simon Hett
   * Release!!
   * Package...
   * Portable
-  
+-->
+
+# What services do we provide?
+
 
 ## What do we offer?
 
@@ -105,6 +157,7 @@ RSEs collaborate with researchers to develop the software they need - Simon Hett
 * Training
 * Consultancy / Advice
 
+<!--
 ## Bede
 
 * Tier 2 HPC fascility hosted by N8
@@ -115,6 +168,7 @@ RSEs collaborate with researchers to develop the software they need - Simon Hett
 * Advice on porting code to CUDA
 * and using CUDA to enhance code
 
+
 ## HEC
 
 * Lancaster's High End Computing cluster.
@@ -122,6 +176,7 @@ RSEs collaborate with researchers to develop the software they need - Simon Hett
 * Dr. Mike Pacey is the primary administrator
 * Support for various computing needs
 * RSE support through training courses.
+-->
 
 ## Project support
 
@@ -132,41 +187,58 @@ RSEs collaborate with researchers to develop the software they need - Simon Hett
   * Refactoring
   * Performance improvements and advice on bottle necks
 
-## Training
+
+# Training
 
 * What do we teach?
 * Continuously evolving
 
-### Version control
 
-* insert image
+## Version control
 
-### Command Line
+<!-- insert image -->
 
-* insert image
 
-### HPC Skills
+## Command Line
 
-* insert image
+<!-- insert image -->
 
-### Python 
 
-* insert image
+## HPC Skills
 
-### R
+<!-- insert image -->
 
-* insert image
 
-### Collaborative coding
+## Python 
 
-* insert image
+<!-- insert image -->
 
-### Constantly evolving
+
+## R
+
+<!-- insert image -->
+
+
+## Collaborative coding
+
+<!-- insert image -->
+
+
+## Constantly evolving
 
 * Identify
 * Understand
 * Provide
 
+<!--
+% Help is on the way - Bicycle repair man
+% Faulty code - Spanish inquisition (bugs) Dead parrot (does not work)
+% Release your code - How not to be seen.
+% Dont need every tool if you forget the purpose - machine that goes ping
+-->
+
+
+<!--
 ## Slide 1 title
 
 Some super quickly created demo slides
@@ -182,7 +254,7 @@ Some super quickly created demo slides
 
 \center The slide syntax is so simple that you can quickly create a handful of slides on basically any device in any editor. E.g. on your mobile on the way to the meeting where you need the slides. Right before the meeting starts you use pandoc to create the actual slides from your source.
 
-
+-->
 
 
 
