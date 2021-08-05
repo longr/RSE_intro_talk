@@ -8,6 +8,7 @@ html:
 	-V theme=white \
 	-V slideNumber=true \
 	-V progress=true
+	# --slide-level=2 enables verticle slides.
 
 pdf:
 	pandoc -t beamer --slide-level=2 -o $(FILES).pdf $(FILES).md \
