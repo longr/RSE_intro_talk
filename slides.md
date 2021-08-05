@@ -98,11 +98,10 @@ like lab equipment it needs to be "callibrated" and "checked"
 
 # Software skill are vital
 
-<!--# SH - https://slides.com/simonhettrick/software-skills-are-vital-to-research#/6-->
-
-
 
 ##
+
+<!--# SH - https://slides.com/simonhettrick/software-skills-are-vital-to-research#/6-->
 
 * Software is fundamental to all disciplines of research[^1]
 * Software skills will allow you to work faster, more reliably and with less boredom
