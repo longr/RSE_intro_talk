@@ -21,3 +21,11 @@ jobs:
 
       - name: Build
         run: make
+
+        name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: .
+        env:
+          GITHUB_PAT: ${{ secrets.TEST }}
