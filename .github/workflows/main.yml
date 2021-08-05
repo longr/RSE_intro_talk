@@ -4,7 +4,7 @@ name: CI
 on: push
 
 jobs:
-  publish:
+  Publish:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -14,20 +14,13 @@ jobs:
         run: |
           sudo apt-get install pandoc
 
-      - name: Build
+      - name: Build Presentation
         run: |
           make
           rm .gitignore *.md #otherwise .gitignore excludes html output
           touch .nojekyll# #Needed to stop github rendering the talks
           mv slides.html index.html
-#      -
-#        uses: crazy-max/ghaction-github-pages@v2
-#        with:
-#          target_branch: gh-pages
-#          build_dir: .
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
