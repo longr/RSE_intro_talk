@@ -1,0 +1,50 @@
+---
+name: CI
+
+on:
+  push:
+    branches: ["master"]
+
+jobs:
+  tests:
+    name: "Python ${{ matrix.python-version }}"
+    strategy:
+      matrix:
+        os: ["ubuntu-latest"]
+        python-version: ["2.7", "3.6", "3.7", "3.8", "pypy3"]
+    runs-on: ${{ matrix.os }}
+    env:
+      DEPLOY_DOCS: '3.7'
+
+    steps:
+      - uses: "actions/checkout@v2"
+      - uses: "actions/setup-python@v1"
+        with:
+          python-version: "${{ matrix.python-version }}"
+      - name: "Install dependencies"
+        run: |
+          set -xe
+          python -VV
+          python -m site
+          python -m pip install --upgrade pip setuptools wheel
+          python -m pip install --upgrade codecov virtualenv tox tox-gh-actions
+
+      - name: "Run tox targets for ${{ matrix.python-version }}"
+        run: "python -m tox"
+
+      - name: "Convert coverage"
+        run: "python -m coverage xml"
+      - name: "Upload coverage to Codecov"
+        uses: "codecov/codecov-action@v1"
+        with:
+          fail_ci_if_error: true
+
+      - name: Deploy
+        if: "contains(env.DEPLOY_DOCS, matrix.python-version)"
+        uses: crazy-max/ghaction-github-pages@v1
+        with:
+          keep_history: true
+          target_branch: gh-pages
+          build_dir: docs/_build/html/
+        env:
+          GITHUB_PAT: ${{ secrets.TEST }}
