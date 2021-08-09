@@ -17,8 +17,8 @@ jobs:
       - name: Build Presentation
         run: |
           make
-          rm .gitignore *.md #otherwise .gitignore excludes html output
-          touch .nojekyll# #Needed to stop github rendering the talks
+          sed '/.*pdf$/d' .gitignore #otherwise .gitignore excludes html output
+          touch .nojekyll #Needed to stop github rendering the talks
           mv slides.html index.html
 
       - name: Deploy to GitHub Pages
